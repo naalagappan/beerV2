@@ -1,6 +1,6 @@
 package com.example.web;
 
-import com.example.model.*;
+import com.example.mod.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.*;
@@ -13,7 +13,7 @@ public class BeerSelect extends HttpServlet
    {
       String c = req.getParameter("color");
       BeerExpert be = new BeerExpert();
-      List result = be.getBrands(c);
+      ArrayList<String> result = be.getBrands(c);
       req.setAttribute("styles", result);
       RequestDispatcher view = req.getRequestDispatcher("result.jsp");
       view.forward(req,resp);
