@@ -4,9 +4,9 @@ import java.util.*;
 
 public class BeerExpert
 {
-   public List getBrands(String color)
+   public ArrayList<String> getBrands(String color)
    {
-      List brands = new ArrayList();
+      ArrayList<String> brands = new ArrayList<String>();
       if (color.equals("amber"))
       {
          brands.add("Jack Amber");
